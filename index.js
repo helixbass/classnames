@@ -16,6 +16,9 @@
 		for (var i = 0; i < arguments.length; i++) {
 			var arg = arguments[i];
 			if (!arg) continue;
+			if (hasOwn.call(arg, 'toString')) {
+			  arg = arg.toString();
+			}
 
 			var argType = typeof arg;
 
